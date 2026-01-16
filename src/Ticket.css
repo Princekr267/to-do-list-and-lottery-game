@@ -1,0 +1,65 @@
+.Ticket{
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 4px dashed #667eea;
+    border-radius: 20px;
+    width: auto;
+    max-width: 450px;
+    margin-bottom: 20px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1000px) rotateX(2deg);
+    transition: all 0.3s ease;
+}
+.Ticket:hover {
+    transform: perspective(1000px) rotateX(0deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.8);
+}
+.Ticket::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: linear-gradient(90deg, #ff6b6b, #ffd93d, #4ecdc4, #667eea, #ff6b6b);
+    background-size: 200% 100%;
+    animation: stripeMove 3s linear infinite;
+}
+.Ticket::after {
+    content: '★';
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    opacity: 0.1;
+    color: #667eea;
+}
+.Ticket p {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #667eea;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid #667eea;
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+.Ticket > :not(p) {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@keyframes stripeMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}

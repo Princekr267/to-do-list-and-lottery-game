@@ -1,0 +1,68 @@
+.TicketNum{
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #fff;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    padding: 0;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.5), inset 0 -3px 8px rgba(0, 0, 0, 0.3), inset 0 3px 8px rgba(255, 255, 255, 0.4);
+    border: 4px solid #fff;
+    transition: all 0.3s ease;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.TicketNum::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    width: 25px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    filter: blur(4px);
+}
+.TicketNum::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    right: 18px;
+    width: 20px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    filter: blur(3px);
+}
+.TicketNum:hover {
+    transform: scale(1.15) rotate(360deg);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.8), inset 0 -3px 8px rgba(0, 0, 0, 0.4), inset 0 3px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Color variations for different numbers */
+.TicketNum:nth-child(2n) {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 6px 20px rgba(240, 147, 251, 0.5), inset 0 -3px 8px rgba(0, 0, 0, 0.3), inset 0 3px 8px rgba(255, 255, 255, 0.4);
+}
+.TicketNum:nth-child(2n):hover {
+    box-shadow: 0 10px 30px rgba(240, 147, 251, 0.8), inset 0 -3px 8px rgba(0, 0, 0, 0.4), inset 0 3px 8px rgba(255, 255, 255, 0.5);
+}
+.TicketNum:nth-child(3n) {
+    background: linear-gradient(135deg, #ffd93d 0%, #ff8a00 100%);
+    box-shadow: 0 6px 20px rgba(255, 217, 61, 0.5), inset 0 -3px 8px rgba(0, 0, 0, 0.3), inset 0 3px 8px rgba(255, 255, 255, 0.4);
+}
+.TicketNum:nth-child(3n):hover {
+    box-shadow: 0 10px 30px rgba(255, 217, 61, 0.8), inset 0 -3px 8px rgba(0, 0, 0, 0.4), inset 0 3px 8px rgba(255, 255, 255, 0.5);
+}
+.TicketNum:nth-child(5n) {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.5), inset 0 -3px 8px rgba(0, 0, 0, 0.3), inset 0 3px 8px rgba(255, 255, 255, 0.4);
+}
+.TicketNum:nth-child(5n):hover {
+    box-shadow: 0 10px 30px rgba(78, 205, 196, 0.8), inset 0 -3px 8px rgba(0, 0, 0, 0.4), inset 0 3px 8px rgba(255, 255, 255, 0.5);
+}
